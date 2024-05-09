@@ -5,8 +5,6 @@ export default function Home() {
   return (
     <div>
 
-      <h2>Hello</h2>
-      <Button variant="outline">Subscribe!</Button>
 
     </div>
   );
