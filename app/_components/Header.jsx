@@ -43,7 +43,7 @@ const Header = () => {
             ))}
         </ul>
             </div>
-            <Link href='#' className='transition-all ease-in-out' onClick={()=>setUserOpen(!userOpen)} onMouseOver={()=>setUserOpen(true)} onMouseOut={()=>setUserOpen(true)} className='border border-primary rounded-full p-2 hover:bg-secondary absolute right-16 md:relative md:right-2'> 
+            <Link href='#'  onClick={()=>setUserOpen(!userOpen)} onMouseOver={()=>setUserOpen(true)} onMouseOut={()=>setUserOpen(true)} className=' transition-all ease-in-out border border-primary rounded-full p-2 hover:bg-secondary absolute right-16 md:relative md:right-2'> 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
             </Link>
             <ul onMouseOver={()=>setUserOpen(true)} onMouseOut={()=>setUserOpen(false)} className={userOpen?'shadow-lg z-50 absolute pl-4 pr-16 right-4 top-[11.4%]':'hidden'}>
