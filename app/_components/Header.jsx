@@ -10,7 +10,13 @@ const Header = () => {
     const [open, setOpen] = React.useState(false);
     const [userOpen, setUserOpen] = React.useState(false);
 
-    const isUserLoggedIn = false;
+    const isUserLoggedIn = localStorage.getItem('loggedIn');
+
+    const Logout = () => {
+
+        localStorage.setItem('loggedIn', false);
+        window.location.replace('/login');
+    }
 
     const Menu = [{
 
@@ -54,7 +60,7 @@ const Header = () => {
             {<ul onMouseOver={() => setUserOpen(true)} onMouseOut={() => setUserOpen(false)} className={userOpen ? 'shadow-lg z-50 absolute pl-4 pr-16 right-4 top-[11.4%] bg-red-300 rounded-sm' : 'hidden'}>
                 <Link href='/'><li className='py-1 my-1 cursor-pointer hover:scale-105 hover:text-primary hover:font-bold transition-all ease-in-out hover:bg-white hover:px-1 hover:rounded-sm'>Dashboard </li></Link>
                 <Link href='#'><li className='py-1 my-1 cursor-pointer hover:scale-105 hover:text-primary hover:font-bold transition-all ease-in-out hover:bg-white hover:px-1 hover:rounded-sm'>Account </li></Link>
-                <Link href='#'><li className='py-1 my-1 cursor-pointer hover:scale-105 hover:text-primary hover:font-bold transition-all ease-in-out hover:bg-white hover:px-1 hover:rounded-sm'>Logout</li></Link>
+                <Link href='#' onClick={Logout} ><li className='py-1 my-1 cursor-pointer hover:scale-105 hover:text-primary hover:font-bold transition-all ease-in-out hover:bg-white hover:px-1 hover:rounded-sm'>Logout</li></Link>
             </ul>
             }
             <div className='md:hidden cursor-pointer hover:scale-110 scale-105 transition-all ease-in-out' onClick={() => setOpen(!open)}>

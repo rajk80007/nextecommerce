@@ -13,6 +13,8 @@ const sendRegister = (data) => axiosClient.post('register', data);
 
 const getDefault=()=>axiosClient.get('test?pupulate=*');
 
+const sendLogin = (data) => axiosClient.post('login', data);
+
 export default{
-    getDefault, sendRegister
+    getDefault, sendRegister, sendLogin
 }
