@@ -14,7 +14,7 @@ const Header = () => {
 
     const Logout = () => {
 
-        localStorage.setItem('loggedIn', false);
+        localStorage.clear();
         window.location.replace('/login');
     }
 
